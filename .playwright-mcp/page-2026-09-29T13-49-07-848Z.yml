@@ -1,0 +1,78 @@
+- generic [active] [ref=f1e1]:
+  - navigation [ref=f1e2]:
+    - generic [ref=f1e4]:
+      - link "EventHub" [ref=f1e5] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f1e10]:
+        - link "Home" [ref=f1e11] [cursor=pointer]:
+          - /url: /
+        - link "Events" [ref=f1e12] [cursor=pointer]:
+          - /url: /events
+        - link "My Bookings" [ref=f1e13] [cursor=pointer]:
+          - /url: /bookings
+        - link "API Docs" [ref=f1e14] [cursor=pointer]:
+          - /url: http://localhost:3001/api/docs
+        - button "Admin" [ref=f1e16] [cursor=pointer]
+        - generic [ref=f1e19]:
+          - generic "rahulshetty1@gmail.com" [ref=f1e20]
+          - button "Logout" [ref=f1e21] [cursor=pointer]
+  - main [ref=f1e22]:
+    - generic [ref=f1e24]:
+      - generic [ref=f1e25]:
+        - heading "My Bookings" [level=1] [ref=f1e26]
+        - paragraph [ref=f1e27]: View and manage all your ticket bookings
+      - generic [ref=f1e28]:
+        - button "Clear all bookings" [ref=f1e29] [cursor=pointer]
+        - paragraph [ref=f1e30]: Do this often for clean test data.
+  - contentinfo [ref=f1e77]:
+    - generic [ref=f1e78]:
+      - generic [ref=f1e79]:
+        - generic [ref=f1e80]:
+          - heading "Rahul Shetty Academy" [level=3] [ref=f1e81]
+          - paragraph [ref=f1e82]: India's leading QA automation training academy — empowering engineers to build real-world testing skills.
+        - generic [ref=f1e83]:
+          - heading "Popular Courses" [level=3] [ref=f1e84]
+          - list [ref=f1e85]:
+            - listitem [ref=f1e86]:
+              - link "Selenium WebDriver with Java" [ref=f1e87] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f1e88]:
+              - link "Playwright with JavaScript" [ref=f1e89] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f1e90]:
+              - link "RestAssured API Testing" [ref=f1e91] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f1e92]:
+              - link "Cypress End-to-End Testing" [ref=f1e93] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f1e94]:
+              - link "Appium Mobile Testing" [ref=f1e95] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+        - generic [ref=f1e96]:
+          - heading "QA Job Hiring Platform" [level=3] [ref=f1e97]
+          - paragraph [ref=f1e98]: Get hired faster — take skill assessments trusted by top QA employers worldwide.
+          - link "techsmarthire.com →" [ref=f1e99] [cursor=pointer]:
+            - /url: https://techsmarthire.com
+        - generic [ref=f1e100]:
+          - heading "EventHub Practice App" [level=3] [ref=f1e101]
+          - list [ref=f1e102]:
+            - listitem [ref=f1e103]:
+              - link "Browse Events" [ref=f1e104] [cursor=pointer]:
+                - /url: /events
+            - listitem [ref=f1e105]:
+              - link "My Bookings" [ref=f1e106] [cursor=pointer]:
+                - /url: /bookings
+            - listitem [ref=f1e107]:
+              - link "Manage Events" [ref=f1e108] [cursor=pointer]:
+                - /url: /admin/events
+            - listitem [ref=f1e109]:
+              - link "API Documentation" [ref=f1e110] [cursor=pointer]:
+                - /url: http://localhost:3001/api/docs
+      - generic [ref=f1e111]:
+        - paragraph [ref=f1e112]: © 2026 Rahul Shetty Academy. All rights reserved.
+        - generic [ref=f1e113]:
+          - link "rahulshettyacademy.com →" [ref=f1e114] [cursor=pointer]:
+            - /url: https://rahulshettyacademy.com
+          - link "techsmarthire.com →" [ref=f1e115] [cursor=pointer]:
+            - /url: https://techsmarthire.com
+  - alert [ref=f1e116]

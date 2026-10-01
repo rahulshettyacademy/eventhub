@@ -1,0 +1,9 @@
+services:
+  playwright:
+    build: .
+    ipc: host          # recommended by Playwright to avoid Chromium crashes
+    init: true
+    volumes:
+      # Reports and artifacts are written back to the host
+      - ./playwright-report:/app/playwright-report
+      - ./test-results:/app/test-results

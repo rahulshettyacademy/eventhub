@@ -1,0 +1,149 @@
+- generic [active] [ref=f2e1]:
+  - navigation [ref=f2e2]:
+    - generic [ref=f2e4]:
+      - link "EventHub" [ref=f2e5] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f2e10]:
+        - link "Home" [ref=f2e11] [cursor=pointer]:
+          - /url: /
+        - link "Events" [ref=f2e12] [cursor=pointer]:
+          - /url: /events
+        - link "My Bookings" [ref=f2e13] [cursor=pointer]:
+          - /url: /bookings
+        - link "API Docs" [ref=f2e14] [cursor=pointer]:
+          - /url: http://localhost:3001/api/docs
+        - button "Admin" [ref=f2e16] [cursor=pointer]
+        - generic [ref=f2e19]:
+          - generic "rahulshetty1@gmail.com" [ref=f2e20]
+          - button "Logout" [ref=f2e21] [cursor=pointer]
+  - main [ref=f2e22]:
+    - generic [ref=f2e23]:
+      - navigation [ref=f2e65]:
+        - link "Events" [ref=f2e66] [cursor=pointer]:
+          - /url: /events
+        - generic [ref=f2e67]: /
+        - generic [ref=f2e68]: World Tech Summit
+      - generic [ref=f2e69]:
+        - generic [ref=f2e70]:
+          - img "World Tech Summit" [ref=f2e72]
+          - generic [ref=f2e73]:
+            - generic [ref=f2e74]:
+              - generic [ref=f2e75]: Conference
+              - generic [ref=f2e76]: Featured
+            - heading "World Tech Summit" [level=1] [ref=f2e77]
+            - generic [ref=f2e78]: This is a featured event — always available for practice
+            - generic [ref=f2e81]:
+              - generic [ref=f2e82]:
+                - generic [ref=f2e83]: 📅
+                - generic [ref=f2e84]:
+                  - paragraph [ref=f2e85]: Date
+                  - paragraph [ref=f2e86]: Saturday, 18 April
+              - generic [ref=f2e87]:
+                - generic [ref=f2e88]: 🕐
+                - generic [ref=f2e89]:
+                  - paragraph [ref=f2e90]: Time
+                  - paragraph [ref=f2e91]: 02:30 pm
+              - generic [ref=f2e92]:
+                - generic [ref=f2e93]: 📍
+                - generic [ref=f2e94]:
+                  - paragraph [ref=f2e95]: Venue
+                  - paragraph [ref=f2e96]: Hyderabad, Hitech city
+              - generic [ref=f2e97]:
+                - generic [ref=f2e98]: 🌆
+                - generic [ref=f2e99]:
+                  - paragraph [ref=f2e100]: City
+                  - paragraph [ref=f2e101]: Hyderabad
+              - generic [ref=f2e102]:
+                - generic [ref=f2e103]: 🎫
+                - generic [ref=f2e104]:
+                  - paragraph [ref=f2e105]: Available
+                  - paragraph [ref=f2e106]: 500 / 500 seats
+              - generic [ref=f2e107]:
+                - generic [ref=f2e108]: 💰
+                - generic [ref=f2e109]:
+                  - paragraph [ref=f2e110]: Price per ticket
+                  - paragraph [ref=f2e111]: $1,500
+            - generic [ref=f2e112]:
+              - heading "About this event" [level=2] [ref=f2e113]
+              - paragraph [ref=f2e114]: A premier technology conference bringing together 500+ industry leaders, startup founders, and engineers for two days of keynotes, workshops, and networking. Topics include AI/ML, cloud infrastructure, DevSecOps, and the future of the Indian tech ecosystem.
+        - generic [ref=f2e116]:
+          - generic [ref=f2e117]:
+            - heading "Book Tickets" [level=2] [ref=f2e118]
+            - generic [ref=f2e119]: $1,500
+          - paragraph [ref=f2e120]: per ticket
+          - generic [ref=f2e245]:
+            - heading "Booking Confirmed! 🎉" [level=3] [ref=f2e249]
+            - paragraph [ref=f2e250]: Your tickets are reserved.
+            - generic [ref=f2e251]:
+              - generic [ref=f2e252]:
+                - generic [ref=f2e253]: Booking Ref
+                - generic [ref=f2e254]: W-MN92NN
+              - generic [ref=f2e255]:
+                - generic [ref=f2e256]: Customer
+                - generic [ref=f2e257]: Explore Tester
+              - generic [ref=f2e258]:
+                - generic [ref=f2e259]: Tickets
+                - generic [ref=f2e260]: "2"
+              - generic [ref=f2e261]:
+                - generic [ref=f2e262]: Total
+                - generic [ref=f2e263]: $3,000
+            - generic [ref=f2e264]:
+              - link [ref=f2e265] [cursor=pointer]:
+                - /url: /bookings
+                - button "View My Bookings" [ref=f2e266]
+              - link [ref=f2e267] [cursor=pointer]:
+                - /url: /events
+                - button "Browse More Events" [ref=f2e268]
+  - contentinfo [ref=f2e25]:
+    - generic [ref=f2e26]:
+      - generic [ref=f2e27]:
+        - generic [ref=f2e28]:
+          - heading "Rahul Shetty Academy" [level=3] [ref=f2e29]
+          - paragraph [ref=f2e30]: India's leading QA automation training academy — empowering engineers to build real-world testing skills.
+        - generic [ref=f2e31]:
+          - heading "Popular Courses" [level=3] [ref=f2e32]
+          - list [ref=f2e33]:
+            - listitem [ref=f2e34]:
+              - link "Selenium WebDriver with Java" [ref=f2e35] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f2e36]:
+              - link "Playwright with JavaScript" [ref=f2e37] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f2e38]:
+              - link "RestAssured API Testing" [ref=f2e39] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f2e40]:
+              - link "Cypress End-to-End Testing" [ref=f2e41] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f2e42]:
+              - link "Appium Mobile Testing" [ref=f2e43] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+        - generic [ref=f2e44]:
+          - heading "QA Job Hiring Platform" [level=3] [ref=f2e45]
+          - paragraph [ref=f2e46]: Get hired faster — take skill assessments trusted by top QA employers worldwide.
+          - link "techsmarthire.com →" [ref=f2e47] [cursor=pointer]:
+            - /url: https://techsmarthire.com
+        - generic [ref=f2e48]:
+          - heading "EventHub Practice App" [level=3] [ref=f2e49]
+          - list [ref=f2e50]:
+            - listitem [ref=f2e51]:
+              - link "Browse Events" [ref=f2e52] [cursor=pointer]:
+                - /url: /events
+            - listitem [ref=f2e53]:
+              - link "My Bookings" [ref=f2e54] [cursor=pointer]:
+                - /url: /bookings
+            - listitem [ref=f2e55]:
+              - link "Manage Events" [ref=f2e56] [cursor=pointer]:
+                - /url: /admin/events
+            - listitem [ref=f2e57]:
+              - link "API Documentation" [ref=f2e58] [cursor=pointer]:
+                - /url: http://localhost:3001/api/docs
+      - generic [ref=f2e59]:
+        - paragraph [ref=f2e60]: © 2026 Rahul Shetty Academy. All rights reserved.
+        - generic [ref=f2e61]:
+          - link "rahulshettyacademy.com →" [ref=f2e62] [cursor=pointer]:
+            - /url: https://rahulshettyacademy.com
+          - link "techsmarthire.com →" [ref=f2e63] [cursor=pointer]:
+            - /url: https://techsmarthire.com
+  - button "Open Tanstack query devtools" [ref=f2e196] [cursor=pointer]
+  - alert [ref=f2e64]

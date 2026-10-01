@@ -40,8 +40,8 @@ function BookingConfirmation({ booking }: { booking: any }) {
           <span className="booking-ref font-mono font-bold text-indigo-600">{booking.data?.bookingRef}</span>
         </Row>
         <Row label="Customer">{booking.data?.customerName}</Row>
-        <Row label="Tickets">{booking.data?.quantity}</Row>
-        <Row label="Total">{fmt_price(booking.data?.totalPrice)}</Row>
+        <Row label="Tickets" data-testid="confirmation-tickets">{booking.data?.quantity}</Row>
+        <Row label="Total" data-testid="confirmation-total">{fmt_price(booking.data?.totalPrice)}</Row>
       </div>
 
       <div className="flex flex-col gap-2">
@@ -56,11 +56,11 @@ function BookingConfirmation({ booking }: { booking: any }) {
   );
 }
 
-function Row({ label, children }: { label: string; children: React.ReactNode }) {
+function Row({ label, children, 'data-testid': testId }: { label: string; children: React.ReactNode; 'data-testid'?: string }) {
   return (
     <div className="flex items-center justify-between text-sm">
       <span className="text-gray-500">{label}</span>
-      <span className="font-medium text-gray-900">{children}</span>
+      <span className="font-medium text-gray-900" data-testid={testId}>{children}</span>
     </div>
   );
 }

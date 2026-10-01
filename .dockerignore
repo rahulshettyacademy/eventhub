@@ -1,0 +1,13 @@
+node_modules
+**/node_modules
+frontend
+backend
+docs
+.git
+.github
+.claude
+.playwright-mcp
+playwright-report
+test-results
+.next
+*.log

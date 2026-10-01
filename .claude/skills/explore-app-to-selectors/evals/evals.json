@@ -1,0 +1,8 @@
+{
+  "skill_name": "explore-app-to-selectors",
+  "evals": [
+    {"id": 1, "prompt": "I'm about to write tests for the refund check on the booking detail page. Can you look at the real app first and tell me what selectors to use?", "expected_output": "Verified locators for #check-refund-btn, #refund-spinner, #refund-result, plus refund rule check (1 ticket eligible, >1 not)."},
+    {"id": 2, "prompt": "my create-event test keeps failing on the date field, walk through the create event form on localhost and tell me what's actually there", "expected_output": "Verified form locators, any drift vs ui-selectors.md, missing data-testids."},
+    {"id": 3, "prompt": "explore the book-a-ticket flow and check the booking ref and seat count rules still hold", "expected_output": "Flow steps, locators, PASS/FAIL for booking ref prefix and seat reduction."}
+  ]
+}

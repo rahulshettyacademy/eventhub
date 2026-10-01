@@ -1,0 +1,145 @@
+- generic [active] [ref=f1e1]:
+  - navigation [ref=f1e2]:
+    - generic [ref=f1e4]:
+      - link "EventHub" [ref=f1e5] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f1e10]:
+        - link "Home" [ref=f1e11] [cursor=pointer]:
+          - /url: /
+        - link "Events" [ref=f1e12] [cursor=pointer]:
+          - /url: /events
+        - link "My Bookings" [ref=f1e13] [cursor=pointer]:
+          - /url: /bookings
+        - link "API Docs" [ref=f1e14] [cursor=pointer]:
+          - /url: http://localhost:3001/api/docs
+        - button "Admin" [ref=f1e16] [cursor=pointer]
+        - generic [ref=f1e19]:
+          - generic "rahulshetty1@gmail.com" [ref=f1e20]
+          - button "Logout" [ref=f1e21] [cursor=pointer]
+  - main [ref=f1e22]:
+    - generic [ref=f1e117]:
+      - navigation [ref=f1e118]:
+        - link "My Bookings" [ref=f1e119] [cursor=pointer]:
+          - /url: /bookings
+        - generic [ref=f1e120]: /
+        - generic [ref=f1e121]: P-E8KIFZ
+      - generic [ref=f1e122]:
+        - generic [ref=f1e123]:
+          - generic [ref=f1e124]:
+            - generic [ref=f1e125]: P-E8KIFZ
+            - generic [ref=f1e126]: confirmed
+          - heading "Probe Event 1" [level=1] [ref=f1e127]
+        - button "Cancel Booking" [ref=f1e128] [cursor=pointer]
+      - generic [ref=f1e129]:
+        - generic [ref=f1e130]:
+          - heading "Event Details" [level=2] [ref=f1e131]
+          - generic [ref=f1e132]:
+            - generic [ref=f1e133]:
+              - generic [ref=f1e134]: Event
+              - generic [ref=f1e135]: Probe Event 1
+            - generic [ref=f1e136]:
+              - generic [ref=f1e137]: Category
+              - generic [ref=f1e138]: Conference
+            - generic [ref=f1e139]:
+              - generic [ref=f1e140]: Date
+              - generic [ref=f1e141]: Saturday, 25 December 2027
+            - generic [ref=f1e142]:
+              - generic [ref=f1e143]: Venue
+              - generic [ref=f1e144]: Hall A
+            - generic [ref=f1e145]:
+              - generic [ref=f1e146]: City
+              - generic [ref=f1e147]: Pune
+        - generic [ref=f1e148]:
+          - heading "Customer Details" [level=2] [ref=f1e149]
+          - generic [ref=f1e150]:
+            - generic [ref=f1e151]:
+              - generic [ref=f1e152]: Name
+              - generic [ref=f1e153]: Explorer One
+            - generic [ref=f1e154]:
+              - generic [ref=f1e155]: Email
+              - generic [ref=f1e156]: rahulshetty1@gmail.com
+            - generic [ref=f1e157]:
+              - generic [ref=f1e158]: Phone
+              - generic [ref=f1e159]: "9876543210"
+        - generic [ref=f1e160]:
+          - heading "Payment Summary" [level=2] [ref=f1e161]
+          - generic [ref=f1e162]:
+            - generic [ref=f1e163]:
+              - generic [ref=f1e164]: Tickets
+              - generic [ref=f1e165]: "1"
+            - generic [ref=f1e166]:
+              - generic [ref=f1e167]: Price per ticket
+              - generic [ref=f1e168]: $10
+            - generic [ref=f1e169]:
+              - generic [ref=f1e170]: Total Paid
+              - generic [ref=f1e171]: $10
+        - generic [ref=f1e172]:
+          - heading "Refund" [level=2] [ref=f1e173]
+          - generic [ref=f1e286]:
+            - status "Loading" [ref=f1e287]
+            - generic [ref=f1e288]: Checking your refund eligibility…
+        - generic [ref=f1e175]:
+          - heading "Booking Information" [level=2] [ref=f1e176]
+          - generic [ref=f1e177]:
+            - generic [ref=f1e178]:
+              - generic [ref=f1e179]: Booked on
+              - generic [ref=f1e180]: Tuesday, 29 September 2026
+            - generic [ref=f1e181]:
+              - generic [ref=f1e182]: Booking ID
+              - generic [ref=f1e183]: "#1"
+      - link [ref=f1e185] [cursor=pointer]:
+        - /url: /bookings
+        - button "← Back to My Bookings" [ref=f1e186]
+  - contentinfo [ref=f1e77]:
+    - generic [ref=f1e78]:
+      - generic [ref=f1e79]:
+        - generic [ref=f1e80]:
+          - heading "Rahul Shetty Academy" [level=3] [ref=f1e81]
+          - paragraph [ref=f1e82]: India's leading QA automation training academy — empowering engineers to build real-world testing skills.
+        - generic [ref=f1e83]:
+          - heading "Popular Courses" [level=3] [ref=f1e84]
+          - list [ref=f1e85]:
+            - listitem [ref=f1e86]:
+              - link "Selenium WebDriver with Java" [ref=f1e87] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f1e88]:
+              - link "Playwright with JavaScript" [ref=f1e89] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f1e90]:
+              - link "RestAssured API Testing" [ref=f1e91] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f1e92]:
+              - link "Cypress End-to-End Testing" [ref=f1e93] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f1e94]:
+              - link "Appium Mobile Testing" [ref=f1e95] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+        - generic [ref=f1e96]:
+          - heading "QA Job Hiring Platform" [level=3] [ref=f1e97]
+          - paragraph [ref=f1e98]: Get hired faster — take skill assessments trusted by top QA employers worldwide.
+          - link "techsmarthire.com →" [ref=f1e99] [cursor=pointer]:
+            - /url: https://techsmarthire.com
+        - generic [ref=f1e100]:
+          - heading "EventHub Practice App" [level=3] [ref=f1e101]
+          - list [ref=f1e102]:
+            - listitem [ref=f1e103]:
+              - link "Browse Events" [ref=f1e104] [cursor=pointer]:
+                - /url: /events
+            - listitem [ref=f1e105]:
+              - link "My Bookings" [ref=f1e106] [cursor=pointer]:
+                - /url: /bookings
+            - listitem [ref=f1e107]:
+              - link "Manage Events" [ref=f1e108] [cursor=pointer]:
+                - /url: /admin/events
+            - listitem [ref=f1e109]:
+              - link "API Documentation" [ref=f1e110] [cursor=pointer]:
+                - /url: http://localhost:3001/api/docs
+      - generic [ref=f1e111]:
+        - paragraph [ref=f1e112]: © 2026 Rahul Shetty Academy. All rights reserved.
+        - generic [ref=f1e113]:
+          - link "rahulshettyacademy.com →" [ref=f1e114] [cursor=pointer]:
+            - /url: https://rahulshettyacademy.com
+          - link "techsmarthire.com →" [ref=f1e115] [cursor=pointer]:
+            - /url: https://techsmarthire.com
+  - button "Open Tanstack query devtools" [ref=f1e237] [cursor=pointer]
+  - alert [ref=f1e116]

@@ -1,0 +1,45 @@
+{
+ "expectations": [
+  {
+   "text": "Checks booking ref first char matches event title",
+   "passed": true,
+   "evidence": "first char"
+  },
+  {
+   "text": "Verifies seats decrease on booking",
+   "passed": true,
+   "evidence": "Seat reduc"
+  },
+  {
+   "text": "Verifies seats restored on cancel",
+   "passed": true,
+   "evidence": "restor"
+  },
+  {
+   "text": "Notes seat count needs reload to refresh",
+   "passed": true,
+   "evidence": "reload"
+  },
+  {
+   "text": "Flags cancel confirm dialog",
+   "passed": true,
+   "evidence": "Yes, cancel it"
+  },
+  {
+   "text": "Flags duplicate #booking-card id / uses testid",
+   "passed": false,
+   "evidence": "no match in report.md"
+  },
+  {
+   "text": "Reports missing data-testids from docs",
+   "passed": false,
+   "evidence": "no match in report.md"
+  }
+ ],
+ "summary": {
+  "passed": 5,
+  "failed": 2,
+  "total": 7,
+  "pass_rate": 0.714
+ }
+}

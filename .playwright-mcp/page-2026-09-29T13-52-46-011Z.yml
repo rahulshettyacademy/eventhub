@@ -1,0 +1,153 @@
+- generic [ref=f5e1]:
+  - navigation [ref=f5e2]:
+    - generic [ref=f5e4]:
+      - link "EventHub" [ref=f5e5] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f5e10]:
+        - link "Home" [ref=f5e11] [cursor=pointer]:
+          - /url: /
+        - link "Events" [ref=f5e12] [cursor=pointer]:
+          - /url: /events
+        - link "My Bookings" [ref=f5e13] [cursor=pointer]:
+          - /url: /bookings
+        - link "API Docs" [ref=f5e14] [cursor=pointer]:
+          - /url: http://localhost:3001/api/docs
+        - button "Admin" [ref=f5e16] [cursor=pointer]
+        - generic [ref=f5e19]:
+          - generic "rahulshetty1@gmail.com" [ref=f5e20]
+          - button "Logout" [ref=f5e21] [cursor=pointer]
+  - main [ref=f5e22]:
+    - generic [ref=f5e23]:
+      - generic [ref=f5e24]:
+        - generic [ref=f5e25]:
+          - heading "My Bookings" [level=1] [ref=f5e26]
+          - paragraph [ref=f5e27]: View and manage all your ticket bookings
+        - generic [ref=f5e28]:
+          - button "Clear all bookings" [ref=f5e29] [cursor=pointer]
+          - paragraph [ref=f5e30]: Do this often for clean test data.
+      - generic [ref=f5e117]:
+        - generic [ref=f5e118]:
+          - generic [ref=f5e119]:
+            - generic [ref=f5e120]:
+              - generic [ref=f5e121]:
+                - generic [ref=f5e122]: P-LVWYYE
+                - generic [ref=f5e123]: confirmed
+                - generic [ref=f5e124]: "#4"
+              - heading "Probe Event 1" [level=3] [ref=f5e125]
+              - generic [ref=f5e126]:
+                - generic [ref=f5e127]: 📅 25 Dec 2027
+                - generic [ref=f5e128]: 🎫 2 tickets
+                - generic [ref=f5e129]: 📍 Pune
+                - generic [ref=f5e130]: 🗓 Booked 29 Sept 2026
+            - generic [ref=f5e131]:
+              - paragraph [ref=f5e132]: $20
+              - paragraph [ref=f5e133]: total
+          - generic [ref=f5e134]:
+            - link [ref=f5e135] [cursor=pointer]:
+              - /url: /bookings/4
+              - button "View Details" [ref=f5e136]
+            - button "Cancel Booking" [active] [ref=f5e137] [cursor=pointer]
+        - generic [ref=f5e138]:
+          - generic [ref=f5e139]:
+            - generic [ref=f5e140]:
+              - generic [ref=f5e141]:
+                - generic [ref=f5e142]: P-TOCLK9
+                - generic [ref=f5e143]: confirmed
+                - generic [ref=f5e144]: "#2"
+              - heading "Probe Event 1" [level=3] [ref=f5e145]
+              - generic [ref=f5e146]:
+                - generic [ref=f5e147]: 📅 25 Dec 2027
+                - generic [ref=f5e148]: 🎫 2 tickets
+                - generic [ref=f5e149]: 📍 Pune
+                - generic [ref=f5e150]: 🗓 Booked 29 Sept 2026
+            - generic [ref=f5e151]:
+              - paragraph [ref=f5e152]: $20
+              - paragraph [ref=f5e153]: total
+          - generic [ref=f5e154]:
+            - link [ref=f5e155] [cursor=pointer]:
+              - /url: /bookings/2
+              - button "View Details" [ref=f5e156]
+            - button "Cancel Booking" [ref=f5e157] [cursor=pointer]
+        - generic [ref=f5e158]:
+          - generic [ref=f5e159]:
+            - generic [ref=f5e160]:
+              - generic [ref=f5e161]:
+                - generic [ref=f5e162]: P-E8KIFZ
+                - generic [ref=f5e163]: confirmed
+                - generic [ref=f5e164]: "#1"
+              - heading "Probe Event 1" [level=3] [ref=f5e165]
+              - generic [ref=f5e166]:
+                - generic [ref=f5e167]: 📅 25 Dec 2027
+                - generic [ref=f5e168]: 🎫 1 ticket
+                - generic [ref=f5e169]: 📍 Pune
+                - generic [ref=f5e170]: 🗓 Booked 29 Sept 2026
+            - generic [ref=f5e171]:
+              - paragraph [ref=f5e172]: $10
+              - paragraph [ref=f5e173]: total
+          - generic [ref=f5e174]:
+            - link [ref=f5e175] [cursor=pointer]:
+              - /url: /bookings/1
+              - button "View Details" [ref=f5e176]
+            - button "Cancel Booking" [ref=f5e177] [cursor=pointer]
+  - contentinfo [ref=f5e77]:
+    - generic [ref=f5e78]:
+      - generic [ref=f5e79]:
+        - generic [ref=f5e80]:
+          - heading "Rahul Shetty Academy" [level=3] [ref=f5e81]
+          - paragraph [ref=f5e82]: India's leading QA automation training academy — empowering engineers to build real-world testing skills.
+        - generic [ref=f5e83]:
+          - heading "Popular Courses" [level=3] [ref=f5e84]
+          - list [ref=f5e85]:
+            - listitem [ref=f5e86]:
+              - link "Selenium WebDriver with Java" [ref=f5e87] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f5e88]:
+              - link "Playwright with JavaScript" [ref=f5e89] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f5e90]:
+              - link "RestAssured API Testing" [ref=f5e91] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f5e92]:
+              - link "Cypress End-to-End Testing" [ref=f5e93] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f5e94]:
+              - link "Appium Mobile Testing" [ref=f5e95] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+        - generic [ref=f5e96]:
+          - heading "QA Job Hiring Platform" [level=3] [ref=f5e97]
+          - paragraph [ref=f5e98]: Get hired faster — take skill assessments trusted by top QA employers worldwide.
+          - link "techsmarthire.com →" [ref=f5e99] [cursor=pointer]:
+            - /url: https://techsmarthire.com
+        - generic [ref=f5e100]:
+          - heading "EventHub Practice App" [level=3] [ref=f5e101]
+          - list [ref=f5e102]:
+            - listitem [ref=f5e103]:
+              - link "Browse Events" [ref=f5e104] [cursor=pointer]:
+                - /url: /events
+            - listitem [ref=f5e105]:
+              - link "My Bookings" [ref=f5e106] [cursor=pointer]:
+                - /url: /bookings
+            - listitem [ref=f5e107]:
+              - link "Manage Events" [ref=f5e108] [cursor=pointer]:
+                - /url: /admin/events
+            - listitem [ref=f5e109]:
+              - link "API Documentation" [ref=f5e110] [cursor=pointer]:
+                - /url: http://localhost:3001/api/docs
+      - generic [ref=f5e111]:
+        - paragraph [ref=f5e112]: © 2026 Rahul Shetty Academy. All rights reserved.
+        - generic [ref=f5e113]:
+          - link "rahulshettyacademy.com →" [ref=f5e114] [cursor=pointer]:
+            - /url: https://rahulshettyacademy.com
+          - link "techsmarthire.com →" [ref=f5e115] [cursor=pointer]:
+            - /url: https://techsmarthire.com
+  - button "Open Tanstack query devtools" [ref=f5e228] [cursor=pointer]
+  - alert [ref=f5e116]
+  - dialog [ref=f5e279]:
+    - generic [ref=f5e280]:
+      - heading "Cancel this booking?" [level=2] [ref=f5e281]
+      - button "Close" [ref=f5e282] [cursor=pointer]
+    - generic [ref=f5e285]:
+      - paragraph [ref=f5e286]: This will cancel P-LVWYYE and release 2 seat(s) back to the event. This action cannot be undone.
+      - generic [ref=f5e287]:
+        - button "Cancel" [ref=f5e288] [cursor=pointer]
+        - button "Yes, cancel it" [ref=f5e289] [cursor=pointer]

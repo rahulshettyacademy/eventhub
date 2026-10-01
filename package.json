@@ -12,6 +12,7 @@
     "lint": "npm run lint --prefix frontend",
     "test": "npx playwright test",
     "test:ui": "npx playwright test --ui",
+    "test:docker": "docker compose up --build --abort-on-container-exit --exit-code-from playwright",
     "test:report": "npx playwright show-report"
   },
   "devDependencies": {

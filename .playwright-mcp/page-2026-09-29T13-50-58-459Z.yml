@@ -1,0 +1,152 @@
+- generic [ref=f5e1]:
+  - navigation [ref=f5e2]:
+    - generic [ref=f5e4]:
+      - link "EventHub" [ref=f5e5] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f5e10]:
+        - link "Home" [ref=f5e11] [cursor=pointer]:
+          - /url: /
+        - link "Events" [ref=f5e12] [cursor=pointer]:
+          - /url: /events
+        - link "My Bookings" [ref=f5e13] [cursor=pointer]:
+          - /url: /bookings
+        - link "API Docs" [ref=f5e14] [cursor=pointer]:
+          - /url: http://localhost:3001/api/docs
+        - button "Admin" [ref=f5e16] [cursor=pointer]
+        - generic [ref=f5e19]:
+          - generic "rahulshetty1@gmail.com" [ref=f5e20]
+          - button "Logout" [ref=f5e21] [cursor=pointer]
+  - main [ref=f5e22]:
+    - generic [ref=f5e23]:
+      - navigation [ref=f5e65]:
+        - link "My Bookings" [ref=f5e66] [cursor=pointer]:
+          - /url: /bookings
+        - generic [ref=f5e67]: /
+        - generic [ref=f5e68]: W-MN92NN
+      - generic [ref=f5e69]:
+        - generic [ref=f5e70]:
+          - generic [ref=f5e71]:
+            - generic [ref=f5e72]: W-MN92NN
+            - generic [ref=f5e73]: confirmed
+          - heading "World Tech Summit" [level=1] [ref=f5e74]
+        - button "Cancel Booking" [active] [ref=f5e75] [cursor=pointer]
+      - generic [ref=f5e76]:
+        - generic [ref=f5e77]:
+          - heading "Event Details" [level=2] [ref=f5e78]
+          - generic [ref=f5e79]:
+            - generic [ref=f5e80]:
+              - generic [ref=f5e81]: Event
+              - generic [ref=f5e82]: World Tech Summit
+            - generic [ref=f5e83]:
+              - generic [ref=f5e84]: Category
+              - generic [ref=f5e85]: Conference
+            - generic [ref=f5e86]:
+              - generic [ref=f5e87]: Date
+              - generic [ref=f5e88]: Saturday, 18 April 2026
+            - generic [ref=f5e89]:
+              - generic [ref=f5e90]: Venue
+              - generic [ref=f5e91]: Hyderabad, Hitech city
+            - generic [ref=f5e92]:
+              - generic [ref=f5e93]: City
+              - generic [ref=f5e94]: Hyderabad
+        - generic [ref=f5e95]:
+          - heading "Customer Details" [level=2] [ref=f5e96]
+          - generic [ref=f5e97]:
+            - generic [ref=f5e98]:
+              - generic [ref=f5e99]: Name
+              - generic [ref=f5e100]: Explore Tester
+            - generic [ref=f5e101]:
+              - generic [ref=f5e102]: Email
+              - generic [ref=f5e103]: rahulshetty1@gmail.com
+            - generic [ref=f5e104]:
+              - generic [ref=f5e105]: Phone
+              - generic [ref=f5e106]: +91 98765 43210
+        - generic [ref=f5e107]:
+          - heading "Payment Summary" [level=2] [ref=f5e108]
+          - generic [ref=f5e109]:
+            - generic [ref=f5e110]:
+              - generic [ref=f5e111]: Tickets
+              - generic [ref=f5e112]: "2"
+            - generic [ref=f5e113]:
+              - generic [ref=f5e114]: Price per ticket
+              - generic [ref=f5e115]: $1,500
+            - generic [ref=f5e116]:
+              - generic [ref=f5e117]: Total Paid
+              - generic [ref=f5e118]: $3,000
+        - generic [ref=f5e119]:
+          - heading "Refund" [level=2] [ref=f5e120]
+          - button "Check eligibility for refund?" [ref=f5e121] [cursor=pointer]
+        - generic [ref=f5e122]:
+          - heading "Booking Information" [level=2] [ref=f5e123]
+          - generic [ref=f5e124]:
+            - generic [ref=f5e125]:
+              - generic [ref=f5e126]: Booked on
+              - generic [ref=f5e127]: Tuesday, 29 September 2026
+            - generic [ref=f5e128]:
+              - generic [ref=f5e129]: Booking ID
+              - generic [ref=f5e130]: "#3"
+      - link [ref=f5e132] [cursor=pointer]:
+        - /url: /bookings
+        - button "← Back to My Bookings" [ref=f5e133]
+  - contentinfo [ref=f5e25]:
+    - generic [ref=f5e26]:
+      - generic [ref=f5e27]:
+        - generic [ref=f5e28]:
+          - heading "Rahul Shetty Academy" [level=3] [ref=f5e29]
+          - paragraph [ref=f5e30]: India's leading QA automation training academy — empowering engineers to build real-world testing skills.
+        - generic [ref=f5e31]:
+          - heading "Popular Courses" [level=3] [ref=f5e32]
+          - list [ref=f5e33]:
+            - listitem [ref=f5e34]:
+              - link "Selenium WebDriver with Java" [ref=f5e35] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f5e36]:
+              - link "Playwright with JavaScript" [ref=f5e37] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f5e38]:
+              - link "RestAssured API Testing" [ref=f5e39] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f5e40]:
+              - link "Cypress End-to-End Testing" [ref=f5e41] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f5e42]:
+              - link "Appium Mobile Testing" [ref=f5e43] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+        - generic [ref=f5e44]:
+          - heading "QA Job Hiring Platform" [level=3] [ref=f5e45]
+          - paragraph [ref=f5e46]: Get hired faster — take skill assessments trusted by top QA employers worldwide.
+          - link "techsmarthire.com →" [ref=f5e47] [cursor=pointer]:
+            - /url: https://techsmarthire.com
+        - generic [ref=f5e48]:
+          - heading "EventHub Practice App" [level=3] [ref=f5e49]
+          - list [ref=f5e50]:
+            - listitem [ref=f5e51]:
+              - link "Browse Events" [ref=f5e52] [cursor=pointer]:
+                - /url: /events
+            - listitem [ref=f5e53]:
+              - link "My Bookings" [ref=f5e54] [cursor=pointer]:
+                - /url: /bookings
+            - listitem [ref=f5e55]:
+              - link "Manage Events" [ref=f5e56] [cursor=pointer]:
+                - /url: /admin/events
+            - listitem [ref=f5e57]:
+              - link "API Documentation" [ref=f5e58] [cursor=pointer]:
+                - /url: http://localhost:3001/api/docs
+      - generic [ref=f5e59]:
+        - paragraph [ref=f5e60]: © 2026 Rahul Shetty Academy. All rights reserved.
+        - generic [ref=f5e61]:
+          - link "rahulshettyacademy.com →" [ref=f5e62] [cursor=pointer]:
+            - /url: https://rahulshettyacademy.com
+          - link "techsmarthire.com →" [ref=f5e63] [cursor=pointer]:
+            - /url: https://techsmarthire.com
+  - button "Open Tanstack query devtools" [ref=f5e184] [cursor=pointer]
+  - alert [ref=f5e64]
+  - dialog [ref=f5e235]:
+    - generic [ref=f5e236]:
+      - heading "Cancel this booking?" [level=2] [ref=f5e237]
+      - button "Close" [ref=f5e238] [cursor=pointer]
+    - generic [ref=f5e241]:
+      - paragraph [ref=f5e242]: Cancelling W-MN92NN will release 2 seat(s) back to the event. This cannot be undone.
+      - generic [ref=f5e243]:
+        - button "Cancel" [ref=f5e244] [cursor=pointer]
+        - button "Yes, cancel it" [ref=f5e245] [cursor=pointer]

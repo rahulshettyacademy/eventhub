@@ -1,0 +1,45 @@
+{
+ "expectations": [
+  {
+   "text": "Identifies date input as datetime-local",
+   "passed": true,
+   "evidence": "datetime-local"
+  },
+  {
+   "text": "States required value format YYYY-MM-DDTHH:mm",
+   "passed": true,
+   "evidence": "YYYY-MM-DDTHH:mm"
+  },
+  {
+   "text": "States date must be in the future / generate dynamically",
+   "passed": true,
+   "evidence": "future"
+  },
+  {
+   "text": "Warns the auto-generated date id is not a valid #id selector",
+   "passed": true,
+   "evidence": "event-date-&-time"
+  },
+  {
+   "text": "Flags doc drift (Browse Events arrow vs ->)",
+   "passed": false,
+   "evidence": "no match in report.md"
+  },
+  {
+   "text": "Suggests specific data-testid additions",
+   "passed": false,
+   "evidence": "no match in report.md"
+  },
+  {
+   "text": "Mentions timezone handling of datetime value",
+   "passed": false,
+   "evidence": "no match in report.md"
+  }
+ ],
+ "summary": {
+  "passed": 4,
+  "failed": 3,
+  "total": 7,
+  "pass_rate": 0.571
+ }
+}

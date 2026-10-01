@@ -79,11 +79,11 @@ function DetailSection({ title, children }: { title: string; children: React.Rea
   );
 }
 
-function Field({ label, children }: { label: string; children: React.ReactNode }) {
+function Field({ label, children, 'data-testid': testId }: { label: string; children: React.ReactNode; 'data-testid'?: string }) {
   return (
     <div className="flex justify-between items-start gap-4">
       <span className="text-sm text-gray-500 shrink-0">{label}</span>
-      <span className="text-sm font-medium text-gray-900 text-right">{children}</span>
+      <span className="text-sm font-medium text-gray-900 text-right" data-testid={testId}>{children}</span>
     </div>
   );
 }
@@ -164,7 +164,7 @@ export default function BookingDetailPage() {
             <h1 className="text-2xl font-bold text-gray-900">{booking.event?.title ?? 'Event Booking'}</h1>
           </div>
           {booking.status === 'confirmed' && (
-            <Button variant="danger" onClick={() => setConfirm(true)}>Cancel Booking</Button>
+            <Button data-testid="cancel-booking-btn" id="cancel-booking-btn" variant="danger" onClick={() => setConfirm(true)}>Cancel Booking</Button>
           )}
         </div>
 
@@ -187,11 +187,11 @@ export default function BookingDetailPage() {
 
           {/* Payment summary */}
           <DetailSection title="Payment Summary">
-            <Field label="Tickets">{booking.quantity}</Field>
+            <Field label="Tickets" data-testid="booking-tickets">{booking.quantity}</Field>
             <Field label="Price per ticket">{booking.event ? fmt_price(parseFloat(booking.event.price)) : '—'}</Field>
             <div className="flex justify-between items-center pt-2 border-t border-gray-100">
               <span className="text-sm font-semibold text-gray-900">Total Paid</span>
-              <span className="text-lg font-bold text-indigo-700">{fmt_price(booking.totalPrice)}</span>
+              <span className="text-lg font-bold text-indigo-700" data-testid="booking-total-paid">{fmt_price(booking.totalPrice)}</span>
             </div>
           </DetailSection>
 

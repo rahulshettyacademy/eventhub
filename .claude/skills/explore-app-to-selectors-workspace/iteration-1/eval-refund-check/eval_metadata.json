@@ -1,0 +1,14 @@
+{
+ "eval_id": 1,
+ "eval_name": "refund-check",
+ "prompt": "I'm about to write tests for the refund check on the booking detail page. Can you look at the real app first and tell me what selectors to use?",
+ "assertions": [
+  "Gives check-refund-btn locator",
+  "Gives refund-spinner locator",
+  "Gives refund-result locator",
+  "Verifies 1-ticket eligible and 2-ticket not eligible",
+  "Warns that regex /eligible for refund/i also matches 'Not eligible'",
+  "Measures/quantifies spinner duration (<= 1 decimal seconds)",
+  "Flags doc drift vs existing docs"
+ ]
+}

@@ -1,0 +1,14 @@
+{
+ "eval_id": 2,
+ "eval_name": "create-event-form",
+ "prompt": "my create-event test keeps failing on the date field, walk through the create event form on localhost and tell me what's actually there",
+ "assertions": [
+  "Identifies date input as datetime-local",
+  "States required value format YYYY-MM-DDTHH:mm",
+  "States date must be in the future / generate dynamically",
+  "Warns the auto-generated date id is not a valid #id selector",
+  "Flags doc drift (Browse Events arrow vs ->)",
+  "Suggests specific data-testid additions",
+  "Mentions timezone handling of datetime value"
+ ]
+}

@@ -1,0 +1,383 @@
+{
+  "metadata": {
+    "skill_name": "explore-app-to-selectors",
+    "skill_path": "<path/to/skill>",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-09-29T13:54:08Z",
+    "evals_run": [
+      1,
+      2,
+      3
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 7,
+        "failed": 0,
+        "total": 7,
+        "time_seconds": 101.2,
+        "tokens": 62995,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Checks booking ref first char matches event title",
+          "passed": true,
+          "evidence": "Booking ref first char = event title first char (uppercase): PASS"
+        },
+        {
+          "text": "Verifies seats decrease on booking",
+          "passed": true,
+          "evidence": "498"
+        },
+        {
+          "text": "Verifies seats restored on cancel",
+          "passed": true,
+          "evidence": "restor"
+        },
+        {
+          "text": "Notes seat count needs reload to refresh",
+          "passed": true,
+          "evidence": "reload"
+        },
+        {
+          "text": "Flags cancel confirm dialog",
+          "passed": true,
+          "evidence": "Yes, cancel it"
+        },
+        {
+          "text": "Flags duplicate #booking-card id / uses testid",
+          "passed": true,
+          "evidence": "booking-card"
+        },
+        {
+          "text": "Reports missing data-testids from docs",
+          "passed": true,
+          "evidence": "Missing data-testid"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 7,
+        "failed": 0,
+        "total": 7,
+        "time_seconds": 98.2,
+        "tokens": 54919,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies date input as datetime-local",
+          "passed": true,
+          "evidence": "datetime-local"
+        },
+        {
+          "text": "States required value format YYYY-MM-DDTHH:mm",
+          "passed": true,
+          "evidence": "2020-01-01T10:00"
+        },
+        {
+          "text": "States date must be in the future / generate dynamically",
+          "passed": true,
+          "evidence": "future"
+        },
+        {
+          "text": "Warns the auto-generated date id is not a valid #id selector",
+          "passed": true,
+          "evidence": "event-date-&-time"
+        },
+        {
+          "text": "Flags doc drift (Browse Events arrow vs ->)",
+          "passed": true,
+          "evidence": "Browse Events \u2192"
+        },
+        {
+          "text": "Suggests specific data-testid additions",
+          "passed": true,
+          "evidence": "data-testid` on the title, form or add"
+        },
+        {
+          "text": "Mentions timezone handling of datetime value",
+          "passed": true,
+          "evidence": "timezone"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 7,
+        "failed": 0,
+        "total": 7,
+        "time_seconds": 131.9,
+        "tokens": 63475,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Gives check-refund-btn locator",
+          "passed": true,
+          "evidence": "check-refund-btn"
+        },
+        {
+          "text": "Gives refund-spinner locator",
+          "passed": true,
+          "evidence": "refund-spinner"
+        },
+        {
+          "text": "Gives refund-result locator",
+          "passed": true,
+          "evidence": "refund-result"
+        },
+        {
+          "text": "Verifies 1-ticket eligible and 2-ticket not eligible",
+          "passed": true,
+          "evidence": "Eligible for refund. Single-ticket bookings qualify for a full refund.\" 6. /bookings/2 (2 tickets) - same flow -> \"Not e"
+        },
+        {
+          "text": "Warns that regex /eligible for refund/i also matches 'Not eligible'",
+          "passed": true,
+          "evidence": "also matches \"Not eligible"
+        },
+        {
+          "text": "Measures/quantifies spinner duration (<= 1 decimal seconds)",
+          "passed": true,
+          "evidence": "4.3 s"
+        },
+        {
+          "text": "Flags doc drift vs existing docs",
+          "passed": true,
+          "evidence": "does not match"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.714,
+        "passed": 5,
+        "failed": 2,
+        "total": 7,
+        "time_seconds": 112.3,
+        "tokens": 53892,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Checks booking ref first char matches event title",
+          "passed": true,
+          "evidence": "first char"
+        },
+        {
+          "text": "Verifies seats decrease on booking",
+          "passed": true,
+          "evidence": "Seat reduc"
+        },
+        {
+          "text": "Verifies seats restored on cancel",
+          "passed": true,
+          "evidence": "restor"
+        },
+        {
+          "text": "Notes seat count needs reload to refresh",
+          "passed": true,
+          "evidence": "reload"
+        },
+        {
+          "text": "Flags cancel confirm dialog",
+          "passed": true,
+          "evidence": "Yes, cancel it"
+        },
+        {
+          "text": "Flags duplicate #booking-card id / uses testid",
+          "passed": false,
+          "evidence": "no match in report.md"
+        },
+        {
+          "text": "Reports missing data-testids from docs",
+          "passed": false,
+          "evidence": "no match in report.md"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.571,
+        "passed": 4,
+        "failed": 3,
+        "total": 7,
+        "time_seconds": 63.4,
+        "tokens": 46304,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies date input as datetime-local",
+          "passed": true,
+          "evidence": "datetime-local"
+        },
+        {
+          "text": "States required value format YYYY-MM-DDTHH:mm",
+          "passed": true,
+          "evidence": "YYYY-MM-DDTHH:mm"
+        },
+        {
+          "text": "States date must be in the future / generate dynamically",
+          "passed": true,
+          "evidence": "future"
+        },
+        {
+          "text": "Warns the auto-generated date id is not a valid #id selector",
+          "passed": true,
+          "evidence": "event-date-&-time"
+        },
+        {
+          "text": "Flags doc drift (Browse Events arrow vs ->)",
+          "passed": false,
+          "evidence": "no match in report.md"
+        },
+        {
+          "text": "Suggests specific data-testid additions",
+          "passed": false,
+          "evidence": "no match in report.md"
+        },
+        {
+          "text": "Mentions timezone handling of datetime value",
+          "passed": false,
+          "evidence": "no match in report.md"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.857,
+        "passed": 6,
+        "failed": 1,
+        "total": 7,
+        "time_seconds": 69.3,
+        "tokens": 48440,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Gives check-refund-btn locator",
+          "passed": true,
+          "evidence": "check-refund-btn"
+        },
+        {
+          "text": "Gives refund-spinner locator",
+          "passed": true,
+          "evidence": "refund-spinner"
+        },
+        {
+          "text": "Gives refund-result locator",
+          "passed": true,
+          "evidence": "refund-result"
+        },
+        {
+          "text": "Verifies 1-ticket eligible and 2-ticket not eligible",
+          "passed": true,
+          "evidence": "Eligible for refund. Single-ticket bookings qualify for a full refund.\"    - 2 tickets: \"Not eligible for refund. Group "
+        },
+        {
+          "text": "Warns that regex /eligible for refund/i also matches 'Not eligible'",
+          "passed": true,
+          "evidence": "also matches \"Not eligible"
+        },
+        {
+          "text": "Measures/quantifies spinner duration (<= 1 decimal seconds)",
+          "passed": false,
+          "evidence": "no match in report.md"
+        },
+        {
+          "text": "Flags doc drift vs existing docs",
+          "passed": true,
+          "evidence": "does not match"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 110.4333,
+        "stddev": 18.6511,
+        "min": 98.2,
+        "max": 131.9
+      },
+      "tokens": {
+        "mean": 60463.0,
+        "stddev": 4807.2395,
+        "min": 54919,
+        "max": 63475
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.714,
+        "stddev": 0.143,
+        "min": 0.571,
+        "max": 0.857
+      },
+      "time_seconds": {
+        "mean": 81.6667,
+        "stddev": 26.6928,
+        "min": 63.4,
+        "max": 112.3
+      },
+      "tokens": {
+        "mean": 49545.3333,
+        "stddev": 3912.8963,
+        "min": 46304,
+        "max": 53892
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.29",
+      "time_seconds": "+28.8",
+      "tokens": "+10918"
+    }
+  },
+  "notes": []
+}

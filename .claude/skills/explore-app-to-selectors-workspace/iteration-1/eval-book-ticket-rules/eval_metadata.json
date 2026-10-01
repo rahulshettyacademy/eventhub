@@ -1,0 +1,14 @@
+{
+ "eval_id": 3,
+ "eval_name": "book-ticket-rules",
+ "prompt": "explore the book-a-ticket flow and check the booking ref and seat count rules still hold",
+ "assertions": [
+  "Checks booking ref first char matches event title",
+  "Verifies seats decrease on booking",
+  "Verifies seats restored on cancel",
+  "Notes seat count needs reload to refresh",
+  "Flags cancel confirm dialog",
+  "Flags duplicate #booking-card id / uses testid",
+  "Reports missing data-testids from docs"
+ ]
+}

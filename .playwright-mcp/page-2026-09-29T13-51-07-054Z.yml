@@ -1,0 +1,123 @@
+- generic [active] [ref=f5e1]:
+  - navigation [ref=f5e2]:
+    - generic [ref=f5e4]:
+      - link "EventHub" [ref=f5e5] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f5e10]:
+        - link "Home" [ref=f5e11] [cursor=pointer]:
+          - /url: /
+        - link "Events" [ref=f5e12] [cursor=pointer]:
+          - /url: /events
+        - link "My Bookings" [ref=f5e13] [cursor=pointer]:
+          - /url: /bookings
+        - link "API Docs" [ref=f5e14] [cursor=pointer]:
+          - /url: http://localhost:3001/api/docs
+        - button "Admin" [ref=f5e16] [cursor=pointer]
+        - generic [ref=f5e19]:
+          - generic "rahulshetty1@gmail.com" [ref=f5e20]
+          - button "Logout" [ref=f5e21] [cursor=pointer]
+  - main [ref=f5e22]:
+    - generic [ref=f5e246]:
+      - generic [ref=f5e247]:
+        - generic [ref=f5e248]:
+          - heading "My Bookings" [level=1] [ref=f5e249]
+          - paragraph [ref=f5e250]: View and manage all your ticket bookings
+        - generic [ref=f5e251]:
+          - button "Clear all bookings" [ref=f5e252] [cursor=pointer]
+          - paragraph [ref=f5e253]: Do this often for clean test data.
+      - generic [ref=f5e254]:
+        - generic [ref=f5e255]:
+          - generic [ref=f5e256]:
+            - generic [ref=f5e257]:
+              - generic [ref=f5e258]:
+                - generic [ref=f5e259]: P-TOCLK9
+                - generic [ref=f5e260]: confirmed
+                - generic [ref=f5e261]: "#2"
+              - heading "Probe Event 1" [level=3] [ref=f5e262]
+              - generic [ref=f5e263]:
+                - generic [ref=f5e264]: 📅 25 Dec 2027
+                - generic [ref=f5e265]: 🎫 2 tickets
+                - generic [ref=f5e266]: 📍 Pune
+                - generic [ref=f5e267]: 🗓 Booked 29 Sept 2026
+            - generic [ref=f5e268]:
+              - paragraph [ref=f5e269]: $20
+              - paragraph [ref=f5e270]: total
+          - generic [ref=f5e271]:
+            - link [ref=f5e272] [cursor=pointer]:
+              - /url: /bookings/2
+              - button "View Details" [ref=f5e273]
+            - button "Cancel Booking" [ref=f5e274] [cursor=pointer]
+        - generic [ref=f5e275]:
+          - generic [ref=f5e276]:
+            - generic [ref=f5e277]:
+              - generic [ref=f5e278]:
+                - generic [ref=f5e279]: P-E8KIFZ
+                - generic [ref=f5e280]: confirmed
+                - generic [ref=f5e281]: "#1"
+              - heading "Probe Event 1" [level=3] [ref=f5e282]
+              - generic [ref=f5e283]:
+                - generic [ref=f5e284]: 📅 25 Dec 2027
+                - generic [ref=f5e285]: 🎫 1 ticket
+                - generic [ref=f5e286]: 📍 Pune
+                - generic [ref=f5e287]: 🗓 Booked 29 Sept 2026
+            - generic [ref=f5e288]:
+              - paragraph [ref=f5e289]: $10
+              - paragraph [ref=f5e290]: total
+          - generic [ref=f5e291]:
+            - link [ref=f5e292] [cursor=pointer]:
+              - /url: /bookings/1
+              - button "View Details" [ref=f5e293]
+            - button "Cancel Booking" [ref=f5e294] [cursor=pointer]
+  - contentinfo [ref=f5e25]:
+    - generic [ref=f5e26]:
+      - generic [ref=f5e27]:
+        - generic [ref=f5e28]:
+          - heading "Rahul Shetty Academy" [level=3] [ref=f5e29]
+          - paragraph [ref=f5e30]: India's leading QA automation training academy — empowering engineers to build real-world testing skills.
+        - generic [ref=f5e31]:
+          - heading "Popular Courses" [level=3] [ref=f5e32]
+          - list [ref=f5e33]:
+            - listitem [ref=f5e34]:
+              - link "Selenium WebDriver with Java" [ref=f5e35] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f5e36]:
+              - link "Playwright with JavaScript" [ref=f5e37] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f5e38]:
+              - link "RestAssured API Testing" [ref=f5e39] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f5e40]:
+              - link "Cypress End-to-End Testing" [ref=f5e41] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=f5e42]:
+              - link "Appium Mobile Testing" [ref=f5e43] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+        - generic [ref=f5e44]:
+          - heading "QA Job Hiring Platform" [level=3] [ref=f5e45]
+          - paragraph [ref=f5e46]: Get hired faster — take skill assessments trusted by top QA employers worldwide.
+          - link "techsmarthire.com →" [ref=f5e47] [cursor=pointer]:
+            - /url: https://techsmarthire.com
+        - generic [ref=f5e48]:
+          - heading "EventHub Practice App" [level=3] [ref=f5e49]
+          - list [ref=f5e50]:
+            - listitem [ref=f5e51]:
+              - link "Browse Events" [ref=f5e52] [cursor=pointer]:
+                - /url: /events
+            - listitem [ref=f5e53]:
+              - link "My Bookings" [ref=f5e54] [cursor=pointer]:
+                - /url: /bookings
+            - listitem [ref=f5e55]:
+              - link "Manage Events" [ref=f5e56] [cursor=pointer]:
+                - /url: /admin/events
+            - listitem [ref=f5e57]:
+              - link "API Documentation" [ref=f5e58] [cursor=pointer]:
+                - /url: http://localhost:3001/api/docs
+      - generic [ref=f5e59]:
+        - paragraph [ref=f5e60]: © 2026 Rahul Shetty Academy. All rights reserved.
+        - generic [ref=f5e61]:
+          - link "rahulshettyacademy.com →" [ref=f5e62] [cursor=pointer]:
+            - /url: https://rahulshettyacademy.com
+          - link "techsmarthire.com →" [ref=f5e63] [cursor=pointer]:
+            - /url: https://techsmarthire.com
+  - button "Open Tanstack query devtools" [ref=f5e184] [cursor=pointer]
+  - alert [ref=f5e64]

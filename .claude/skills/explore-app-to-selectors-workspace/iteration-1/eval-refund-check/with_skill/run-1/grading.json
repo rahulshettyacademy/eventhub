@@ -1,0 +1,45 @@
+{
+ "expectations": [
+  {
+   "text": "Gives check-refund-btn locator",
+   "passed": true,
+   "evidence": "check-refund-btn"
+  },
+  {
+   "text": "Gives refund-spinner locator",
+   "passed": true,
+   "evidence": "refund-spinner"
+  },
+  {
+   "text": "Gives refund-result locator",
+   "passed": true,
+   "evidence": "refund-result"
+  },
+  {
+   "text": "Verifies 1-ticket eligible and 2-ticket not eligible",
+   "passed": true,
+   "evidence": "Eligible for refund. Single-ticket bookings qualify for a full refund.\" 6. /bookings/2 (2 tickets) - same flow -> \"Not e"
+  },
+  {
+   "text": "Warns that regex /eligible for refund/i also matches 'Not eligible'",
+   "passed": true,
+   "evidence": "also matches \"Not eligible"
+  },
+  {
+   "text": "Measures/quantifies spinner duration (<= 1 decimal seconds)",
+   "passed": true,
+   "evidence": "4.3 s"
+  },
+  {
+   "text": "Flags doc drift vs existing docs",
+   "passed": true,
+   "evidence": "does not match"
+  }
+ ],
+ "summary": {
+  "passed": 7,
+  "failed": 0,
+  "total": 7,
+  "pass_rate": 1.0
+ }
+}

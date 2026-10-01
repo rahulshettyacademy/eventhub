@@ -302,3 +302,17 @@ await page.fill('[data-testid="customer-phone"]', '9876543210');
 await page.click('[data-testid="confirm-booking-btn"]');
 await expect(page.locator('[data-testid="booking-ref"]')).toBeVisible();
 ```
+
+## Run Playwright Tests in Docker
+
+Runs the E2E suite against https://eventhub.rahulshettyacademy.com — only Docker is required.
+
+```bash
+docker compose up --build --abort-on-container-exit --exit-code-from playwright
+```
+
+Or, if you have `npm`: `npm run test:docker`.
+
+- HTML report: `playwright-report/index.html` (open with `npx playwright show-report`)
+- Failure screenshots/videos: `test-results/`
+- Run a single file: `docker compose run --rm playwright npx playwright test tests/booking-flow.spec.js`
