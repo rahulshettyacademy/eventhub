@@ -107,6 +107,34 @@ npm run dev
 
 ---
 
+## Running the E2E Tests in Docker
+
+The only thing you need installed is [Docker Desktop](https://www.docker.com/products/docker-desktop/). You don't need Node, Java, Maven or any browsers. The tests run against the live site.
+
+```bash
+git clone <repo-url> && cd eventhub
+./run-tests.sh            # macOS / Linux / Git Bash
+run-tests.cmd             # Windows Command Prompt / PowerShell
+```
+
+This runs the Playwright suite and the Selenium (Java + TestNG) suite in parallel, prefixing each output line with the suite name. It prints a pass/fail summary and exits non-zero if either suite fails. To run a single suite, pass `playwright` or `selenium`. Reports are written to:
+
+| Report | Path |
+|---|---|
+| Playwright HTML | `reports/playwright-report/index.html` |
+| Selenium (TestNG) HTML | `reports/selenium-report/index.html` |
+
+| File | Purpose |
+|---|---|
+| `docker/playwright.Dockerfile` | Official Playwright image (Chromium) + `npm ci` + `tests/` |
+| `docker/selenium.Dockerfile` | Maven + Java 21 + Google Chrome + `selenium/` module |
+| `docker/*.Dockerfile.dockerignore` | Per-image build context (only the files each image needs) |
+| `docker-compose.yml` | `playwright` and `selenium` services, with `./reports` mounted |
+
+You can also run `docker compose up --build`, which starts both suites in parallel without the summary. They can run side by side because each suite logs in as different users. Playwright uses `rahulshetty1@gmail.com` and `@yahoo.com`. Selenium uses its own pair, registered automatically on the first run. The app keeps bookings and seat counts per user.
+
+---
+
 ## API Endpoints
 
 Base URL: `http://localhost:3001`

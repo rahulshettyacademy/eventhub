@@ -1,0 +1,6 @@
+# Build context for docker/playwright.Dockerfile: only the Playwright suite is needed
+*
+!package.json
+!package-lock.json
+!playwright.config.ts
+!tests/

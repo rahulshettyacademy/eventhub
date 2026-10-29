@@ -9,16 +9,20 @@ user-invocable: false
 ## Overview
 This document defines the testing standards, patterns, and best practices for writing Playwright E2E tests in the EventHub project. All test automation agents and code reviewers MUST follow these guidelines.
 
+Loaded by `/generate-tests`, `/review-tests` and `/test-strategy`. The Selenium + Java counterpart is `selenium-best-practices`. Both skills share the same locator priority, shared-account rules and EventHub domain facts. If you change a rule here, check whether the Selenium skill needs the same change.
+
+Domain knowledge lives in the `eventhub-domain` skill: `ui-selectors.md` for selectors, `business-rules.md` for what to assert, `user-flows.md` for test steps and test accounts, `api-reference.md` for API setup and cleanup.
+
 ---
 
 ## 1. Project Test Setup
 
 ### Config Reference
 - **Test directory**: `./tests`
-- **Base URL**: `http://localhost:3000`
+- **Base URL**: `https://eventhub.rahulshettyacademy.com` (the live site, not a local server). Specs also define `BASE_URL` and `API_URL` (`https://api.eventhub.rahulshettyacademy.com/api`) constants with the same targets
 - **Timeout**: 30s per test, 5s per assertion
 - **Browser**: Chromium only (Desktop Chrome)
-- **Parallel execution**: Disabled (`fullyParallel: false`)
+- **Parallel execution**: Disabled (`fullyParallel: false`, `workers: 1`). Every spec shares one live account, so spec files must not run at the same time
 - **Reporter**: HTML
 - **Screenshots**: Only on failure
 - **Video**: Retain on failure
@@ -43,7 +47,7 @@ Use for: Elements that need stable test hooks. Ask developers to add `data-testi
 
 ### Priority 2: Accessibility Roles
 ```javascript
-page.getByRole('link', { name: 'Browse Events ->' })
+page.getByRole('link', { name: 'Browse Events →' })
 page.getByRole('button', { name: 'Submit' })
 ```
 Use for: Links, buttons, headings — anything with semantic HTML roles.
@@ -142,7 +146,7 @@ await expect(page.locator('#refund-spinner')).not.toBeVisible({ timeout: 6000 })
 ```javascript
 import { test, expect } from '@playwright/test';
 
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'https://eventhub.rahulshettyacademy.com';
 
 // Credentials as constants at top
 const USER_EMAIL = 'rahulshetty1@gmail.com';
@@ -154,7 +158,7 @@ async function login(page) {
   await page.getByPlaceholder('you@email.com').fill(USER_EMAIL);
   await page.getByLabel('Password').fill(USER_PASSWORD);
   await page.locator('#login-btn').click();
-  await expect(page.getByRole('link', { name: 'Browse Events ->' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Browse Events →' })).toBeVisible();
 }
 
 test('descriptive test name that explains what is validated', async ({ page }) => {
@@ -256,9 +260,26 @@ const SIX_EVENTS_RESPONSE = {
 };
 ```
 
+Mocking belongs to Playwright only. Selenium tests never mock (see `selenium-best-practices` §10), so mocked UI states (banners, empty lists, error screens) are covered here.
+
 ---
 
+## 7. Auth, Test Users and the Shared Account
+
+### Log in through the API, not the form
+Only tests about the login page itself should use the form. For everything else, get a token from `POST /api/auth/login` through the `request` fixture and inject it before the page loads:
+```javascript
+await page.addInitScript((t) => localStorage.setItem('eventhub_token', t), token);
 ```
+
+### Set up and clean up through the API
+Create bookings with `POST /api/bookings` in `beforeEach`, record every created ID immediately, and delete only those IDs with `DELETE /api/bookings/:id` in `afterEach` (see `tests/booking-flow.spec.js`). Pick a static event with enough seats through `GET /api/events`; don't hardcode titles or IDs.
+
+### Shared account rules
+- All runs (Playwright, Selenium, other people) use the same live account, so its bookings can change mid-test
+- Find your own card by its booking ref (`filter({ has: page.locator('.booking-ref', { hasText: ref }) })`) and assert relative order, never "the first card is mine"
+- Never use "Clear all bookings" as cleanup. Only the test that verifies Clear all (TC-005) may click it
+- The account keeps at most 9 bookings (FIFO), so leftover bookings push out older ones rather than failing tests
 
 ### Test Users
 | User          | Email                       | Password    | Purpose          |
@@ -324,6 +345,11 @@ npx playwright test tests/booking-flow.spec.js --reporter=line
 npx playwright test --ui
 ```
 
+### Watch it in a real browser window
+```bash
+npx playwright test tests/booking-flow.spec.js --headed
+```
+
 ### View HTML Report
 ```bash
 npx playwright show-report
@@ -341,4 +367,7 @@ npx playwright show-report
 | `test.only()` left in code | Skips other tests in CI | Remove before commit |
 | No assertions after action | Test passes but proves nothing | Always assert outcomes |
 | Shared state between tests | Order-dependent failures | Each test self-contained |
+| "Clear all bookings" as cleanup | Deletes other tests' data on the shared account | Delete only recorded IDs |
+| Asserting "first card is mine" | Breaks when others book on the shared account | Filter by your ref; assert relative order |
+| Logging in through the form in every test | Slow, and tests the login page repeatedly | API login + `addInitScript` token (§7) |
 | Testing implementation details | Breaks on refactor | Test user-visible behavior |

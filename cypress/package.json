@@ -1,0 +1,13 @@
+{
+  "name": "eventhub-cypress",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cypress API tests for the Library API (not an EventHub API)",
+  "scripts": {
+    "test": "cypress run",
+    "open": "cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^14.0.0"
+  }
+}

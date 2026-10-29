@@ -29,7 +29,10 @@
       "Bash(ls -la /Users/rahulshetty/aithoughts/eventhub/frontend/.env* 2>&1)",
       "Bash(grep -r \"password\\\\|api.key\\\\|secret\\\\|token\" /Users/rahulshetty/aithoughts/eventhub/*.md 2>/dev/null | head -20)",
       "Bash(git remote:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git branch -d:*)",
+      "Bash(git push origin --delete:*)",
+      "Bash(git worktree prune)"
     ]
   }
 }

@@ -13,6 +13,7 @@ node_modules/
 .next/
 dist/
 build/
+selenium/target/
 
 # Logs
 *.log
@@ -23,9 +24,32 @@ npm-debug.log*
 Thumbs.db
 
 # IDE
-.vscode/
+.vscode/*
+!.vscode/settings.json
 .idea/
 
 # Playwright test artifacts
 playwright-report/
 test-results/
+
+# Selenium (Maven) build output, reports and screenshots
+selenium/target/
+
+# Rest Assured (Maven) build output and reports
+restassured/target/
+
+# Claude Code worktrees
+.claude/worktrees/
+
+# Reports from the Docker test runs (run-tests.sh / run-tests.cmd)
+reports/
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+# Python (python/ module)
+python/.venv/
+__pycache__/
+.pytest_cache/

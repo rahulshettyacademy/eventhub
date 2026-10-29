@@ -33,9 +33,9 @@
 name: Deploy – Production
 
 on:
-  # Auto-deploy when code is merged (pushed) to main
-  push:
-    branches: [main]
+  # Paused: no auto-deploy on push to main for now. Uncomment to re-enable.
+  # push:
+  #   branches: [main]
 
   # Allow on-demand deploys from the GitHub Actions UI
   workflow_dispatch:

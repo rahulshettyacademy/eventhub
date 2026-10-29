@@ -1,0 +1,43 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# EventHub E2E tests in Docker — nothing to install on the host except Docker.
+#
+# Run both suites in parallel, with a PASSED/FAILED summary and exit code:
+#   ./run-tests.sh          (macOS / Linux / Git Bash)
+#   run-tests.cmd           (Windows)
+#
+# Or with Compose directly:
+#   docker compose up --build                     both suites in parallel
+#   docker compose run --rm --build playwright    one suite
+#   docker compose run --rm --build selenium
+#
+# Reports land in ./reports on the host:
+#   reports/playwright-report/index.html    Playwright HTML report
+#   reports/selenium-report/index.html      TestNG HTML report
+#
+# The suites can run at the same time because they use different users
+# (Playwright: rahulshetty1@gmail.com / @yahoo.com; Selenium: its own accounts,
+# registered automatically), and the app keeps bookings and seats per user.
+# Within each suite, tests still run one at a time.
+# ══════════════════════════════════════════════════════════════════════════════
+
+services:
+  playwright:
+    image: eventhub-playwright-tests
+    build:
+      context: .
+      dockerfile: docker/playwright.Dockerfile
+    init: true          # reap Chromium child processes cleanly
+    ipc: host           # recommended by Playwright for Chromium in Docker
+    volumes:
+      - ./reports:/reports
+
+  selenium:
+    image: eventhub-selenium-tests
+    build:
+      context: .
+      dockerfile: docker/selenium.Dockerfile
+    platform: linux/amd64   # Google Chrome only ships for amd64 (emulated on Apple Silicon)
+    init: true
+    shm_size: 2gb           # Docker's 64 MB default /dev/shm crashes Chrome
+    volumes:
+      - ./reports:/reports

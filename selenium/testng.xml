@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- parallel="none": all tests share one live account, so run one at a time -->
+<suite name="EventHub Selenium" parallel="none">
+  <listeners>
+    <!-- Writes test-case-report.html: every test case, sorted by TC number, with status and failure reason -->
+    <listener class-name="com.eventhub.utils.TestCaseReport"/>
+  </listeners>
+  <test name="Booking">
+    <classes>
+      <class name="com.eventhub.tests.BookingFlowTest"/>
+      <class name="com.eventhub.tests.BookingJourneyTest"/>
+      <class name="com.eventhub.tests.AdminBookingsTest"/>
+    </classes>
+  </test>
+  <test name="Access control">
+    <classes>
+      <class name="com.eventhub.tests.AccessControlTest"/>
+    </classes>
+  </test>
+</suite>

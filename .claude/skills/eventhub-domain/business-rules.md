@@ -19,19 +19,20 @@
 - When limit reached, the OLDEST event is automatically deleted (FIFO replacement)
 - Static events are not counted toward this limit
 - Static events cannot be edited or deleted
-- Events page shows max 9 events at a time with pagination
+- Events page shows 12 events per page, with pagination
 
 ## 4. Booking Limits (FIFO Pruning)
 - Max **9 bookings** per user
 - When limit reached, the OLDEST booking is automatically deleted (FIFO replacement)
-- Bookings page shows max 9 bookings at a time
+- The bookings list never holds more than 9 bookings, because of the limit above
 - Booking deletion (cancellation) immediately frees seats
-- "Clear All Bookings" button removes all bookings in one go
+- "Clear all bookings" (top of the bookings page, behind a native `confirm()`) removes all bookings in one go. The page labels it "Do this often for clean test data"
+- Test impact: the test account is shared by every run, so tests must delete only the bookings they created and must not use "Clear all bookings" as cleanup
 
-## 5. Sandbox Warning Banners
-- **Events page**: Banner appears when user has close to or more than 6 events displayed, warning about sandbox limits ("sandbox holds up to 6 events and 9 bookings")
-- **Bookings page**: Conditional banner also appears giving heads-up about booking limits
-- Banners are hidden when counts are low (e.g., fewer than 5 events)
+## 5. Sandbox Warning Banner
+- **Events page only**: the banner appears when more than 5 events are listed (6 or more). Text: "Your sandbox holds up to 9 bookings and you can create up to 6 custom events. When either limit is reached, the oldest entry is automatically replaced."
+- It's hidden when 5 or fewer events are listed (`sandbox-banner.spec.js` checks 6 shown, 4 hidden)
+- The bookings page has no sandbox banner
 
 ## 6. Per-User Seat Availability
 - For static events: `availableSeats` is a fixed DB field

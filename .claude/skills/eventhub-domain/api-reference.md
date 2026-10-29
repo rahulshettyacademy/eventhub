@@ -30,7 +30,7 @@
 | Scenario                  | HTTP Code | Message                              |
 |---------------------------|-----------|--------------------------------------|
 | Invalid login credentials | 401       | Invalid credentials                  |
-| Duplicate email register  | 409       | Email already registered             |
+| Duplicate email register  | 400       | Email already registered             |
 | Missing auth token        | 401       | Unauthorized                         |
 | Cross-user booking access | 403       | Forbidden / Access Denied            |
 | Edit static event         | 403       | Cannot modify static events          |

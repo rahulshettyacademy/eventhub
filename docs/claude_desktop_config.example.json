@@ -1,0 +1,85 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ]
+    },
+    "contextqa": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "mcp-remote@latest",
+        "https://mcp.contextqa.com/mcp"
+      ]
+    },
+    "selenium": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@angiejones/mcp-selenium@latest"
+      ]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "D:/Sanket/Learn AI Tools and Build AI Agents for Testing and QA Automation/Section 5 Intro to MCP Servers Build Agents with MCP tooling/LLM-MCP+(AI+Agent)-20250402T034336Z-001/LLM-MCP (AI Agent)"
+      ]
+    },
+    "excel": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "--yes",
+        "@negokaz/excel-mcp-server"
+      ],
+      "env": {
+        "EXCEL_MCP_PAGING_CELLS_LIMIT": "4000"
+      }
+    },
+    "rest-api": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "dkmaker-mcp-rest-api"
+      ],
+      "env": {
+        "REST_BASE_URL": "https://rahulshettyacademy.com",
+        "HEADER_Accept": "application/json"
+      }
+    },
+    "mysql": {
+      "command": "C:/Users/rajpa/.local/bin/uv.exe",
+      "args": [
+        "--directory",
+        "C:/Users/rajpa/AppData/Roaming/Python/Python315/site-packages",
+        "run",
+        "mysql_mcp_server"
+      ],
+      "env": {
+        "MYSQL_HOST": "localhost",
+        "MYSQL_PORT": "3306",
+        "MYSQL_USER": "root",
+        "MYSQL_PASSWORD": "<your-mysql-password>",
+        "MYSQL_DATABASE": "rahulshettyacademy"
+      }
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "<your-github-pat>"
+      }
+    }
+  }
+}

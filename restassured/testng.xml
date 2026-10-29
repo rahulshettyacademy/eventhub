@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- The course classes each start their own local mock server; only LibraryBookTest calls a live API -->
+<suite name="Courses API schema" parallel="none">
+  <listeners>
+    <!-- Writes test-case-report.html: every test case, sorted by TC number, with status and failure reason -->
+    <listener class-name="com.eventhub.restassured.support.TestCaseReport"/>
+  </listeners>
+  <test name="Schema">
+    <classes>
+      <class name="com.eventhub.restassured.tests.ValidCoursesResponseTest"/>
+      <class name="com.eventhub.restassured.tests.InvalidCoursesResponseTest"/>
+    </classes>
+  </test>
+  <test name="Prices">
+    <classes>
+      <class name="com.eventhub.restassured.tests.CoursePricesTest"/>
+    </classes>
+  </test>
+  <test name="POJO">
+    <classes>
+      <class name="com.eventhub.restassured.tests.CoursesPojoTest"/>
+    </classes>
+  </test>
+  <!-- Calls the live Library API at 216.10.245.166; adds a book and deletes it again -->
+  <test name="Library">
+    <classes>
+      <class name="com.eventhub.restassured.tests.LibraryBookTest"/>
+    </classes>
+  </test>
+</suite>
