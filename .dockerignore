@@ -1,0 +1,6 @@
+# Allow-list: the test image only needs these files
+*
+!package.json
+!package-lock.json
+!playwright.config.ts
+!tests/
