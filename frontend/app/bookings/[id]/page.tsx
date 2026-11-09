@@ -99,6 +99,8 @@ export default function BookingDetailPage() {
   const { mutate: cancel, isPending } = useCancelBooking();
 
   const handleCancel = () => {
+    if (!booking) return;
+
     cancel(booking.id, {
       onSuccess: () => {
         toast('Booking cancelled successfully', 'success');
@@ -188,7 +190,7 @@ export default function BookingDetailPage() {
           {/* Payment summary */}
           <DetailSection title="Payment Summary">
             <Field label="Tickets">{booking.quantity}</Field>
-            <Field label="Price per ticket">{booking.event ? fmt_price(parseFloat(booking.event.price)) : '—'}</Field>
+            <Field label="Price per ticket">{booking.event ? fmt_price(Number(booking.event.price)) : '—'}</Field>
             <div className="flex justify-between items-center pt-2 border-t border-gray-100">
               <span className="text-sm font-semibold text-gray-900">Total Paid</span>
               <span className="text-lg font-bold text-indigo-700">{fmt_price(booking.totalPrice)}</span>
@@ -218,7 +220,7 @@ export default function BookingDetailPage() {
         onConfirm={handleCancel}
         isLoading={isPending}
         title="Cancel this booking?"
-        description={`Cancelling ${booking.bookingRef} will release ${booking.quantity} seat(s) back to the event. This cannot be undone.`}
+        description={booking ? `Cancelling ${booking.bookingRef} will release ${booking.quantity} seat(s) back to the event. This cannot be undone.` : 'Cancelling this booking will release its seats back to the event.'}
         confirmLabel="Yes, cancel it"
       />
     </>

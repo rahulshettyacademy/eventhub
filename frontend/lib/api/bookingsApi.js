@@ -20,4 +20,8 @@ export const bookingsApi = {
   /** DELETE /bookings/:id (cancel) */
   cancelBooking: (id) =>
     apiClient.delete(`/bookings/${id}`),
+
+  /** DELETE /bookings (clear all current user's bookings) */
+  clearAllBookings: () =>
+    apiClient.delete('/bookings'),
 };

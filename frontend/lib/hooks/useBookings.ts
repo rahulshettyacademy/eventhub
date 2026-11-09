@@ -14,8 +14,13 @@ export function useBookings(filters: Record<string, unknown> = {}) {
 export function useBooking(id: string | number | null | undefined) {
   return useQuery({
     queryKey: ['booking', id],
-    queryFn:  () => bookingsApi.getBookingById(id),
-    enabled:  !!id,
+    queryFn: () => {
+      if (id === null || id === undefined || id === '') {
+        throw new Error('Booking id is required');
+      }
+      return bookingsApi.getBookingById(id);
+    },
+    enabled: !!id,
   });
 }
 

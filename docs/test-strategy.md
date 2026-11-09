@@ -1,7 +1,7 @@
 # EventHub — Booking Management Test Strategy
 
 Generated: 2026-03-06
-Input: `docs/test-scenarios.md` (53 scenarios, TC-001 to TC-510)
+Input: `docs/test-scenarios.md` (88 scenarios, TC-001 to TC-516)
 
 ---
 

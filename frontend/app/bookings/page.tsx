@@ -8,7 +8,7 @@ import Pagination  from '@/components/ui/Pagination';
 import Spinner     from '@/components/ui/Spinner';
 import Button      from '@/components/ui/Button';
 import { useBookings } from '@/lib/hooks/useBookings';
-import { bookingsApi } from '@/lib/api/bookings';
+import { bookingsApi } from '@/lib/api/bookingsApi';
 
 
 function BookingsContent() {
@@ -28,7 +28,7 @@ function BookingsContent() {
     if (!confirm('Clear all your bookings? This cannot be undone.')) return;
     setClearing(true);
     try {
-      await bookingsApi.clearAll();
+      await bookingsApi.clearAllBookings();
       refetch();
     } finally {
       setClearing(false);
